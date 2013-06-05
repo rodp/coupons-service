@@ -3,12 +3,12 @@ Coupons Web Service
 
 A simple restful service that generates coupons.
 
-# Prerequisites
+## Prerequisites
 
   - Node.js
   - NPM
 
-# Usage
+## Usage
 
   1. Install dependencies:
 
@@ -34,7 +34,7 @@ A simple restful service that generates coupons.
             value: "123"
         }
 
-# How it works
+## How it works
 
                  _____________    2    __________
                 |             |<------|          |
