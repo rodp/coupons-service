@@ -1,0 +1,26 @@
+{
+    "author"         : "Rodoljub Petrovic <me@rodpetrovic.com>",
+    "name"           : "coupon-service",
+    "description"    : "",
+    "version"        : "1.0.0",
+    "repository"     : {},
+    "main"           : "./service",
+    "scripts": {
+        "test"       : "mocha"
+    },
+    "engines": {
+        "node"       : "*"
+    },
+    "dependencies": {
+        "express"    : "3.x",
+        "node-uuid"  : "1.4.x",
+        "mysql"      : "2.x",
+        "redis"      : "0.8.x",
+        "amqp"       : "0.1.x"
+    },
+    "devDependencies": {
+        "mocha"      : "1.x",
+        "sinon"      : "1.7.x",
+        "dox"        : "0.4.x"
+    }
+}
