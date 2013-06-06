@@ -16,8 +16,7 @@
         "cors"       : "1.x",
         "node-uuid"  : "1.4.x",
         "mysql"      : "2.x",
-        "redis"      : "0.8.x",
-        "amqp"       : "0.1.x"
+        "redis"      : "0.8.x"
     },
     "devDependencies": {
         "mocha"      : "1.x",

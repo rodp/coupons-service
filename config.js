@@ -6,7 +6,11 @@ module.exports = {
         'database' : 'coupon-world'
     },
 
-    'redis' : {},
+    'redis' : {
+        'host'     : null,
+        'port'     : null,
+        'other'    : null
+    },
 
     'queue' : {  
         host: 'rodpetrovic.com',
