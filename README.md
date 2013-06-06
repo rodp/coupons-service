@@ -34,6 +34,12 @@ A simple restful service that generates coupons.
             value: "123"
         }
 
+## Development
+
+Running tests:
+    
+    npm test
+
 ## Architecture and Flow
 
                  _____________    2    __________
@@ -69,7 +75,7 @@ A simple restful service that generates coupons.
   2. Redis is used to cache DB queries. Caching layer can be independently scaled. A simpler caching system could have been used (e.g., Memcached), but Redis keeps more options open for future development.
   3. Cache, Database and Queue are wrapped, so they can be easily abstracted and mocked.
   4. Queue, in this case, is another web service (due to familiarity and time constraints), but it wouldn't be a problem to use something like RabbitMQ instead.
-  5. Sinon was used for stubs, Mocha for runing tests.
+  5. Sinon was used for stubs, Mocha for running tests.
   6. Dox was added and can be used to generate documentation.
   7. ...
 
