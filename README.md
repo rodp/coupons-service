@@ -34,7 +34,7 @@ A simple restful service that generates coupons.
             value: "123"
         }
 
-## How it works
+## Architecture and Flow
 
                  _____________    2    __________
                 |             |<------|          |
@@ -56,10 +56,20 @@ A simple restful service that generates coupons.
                 |             |
                  -------------
 
-  1. Receive GET request at `/coupons/:campaignID`
+  1. Receive GET request at `/coupons/:campaignID` (Express)
   2. Query cache (Redis) with campaign ID for coupon value
   3. If not found, query database (MySQL) for coupon value
   4. Cache the campaign ID, coupon value pair
-  5. Submit the coupon to the remote queue (RabbitMQ)
+  5. Submit the coupon to the remote queue (HTTP)
   6. Respond with coupon JSON
+
+## Decisions
+
+  1. CORS is enabled to allow access to the service from different domains (i.e., from ads).
+  2. Redis is used to cache DB queries. Caching layer can be independently scaled. A simpler caching system could have been used (e.g., Memcached), but Redis keeps more options open for future development.
+  3. Cache, Database and Queue are wrapped, so they can be easily abstracted and mocked.
+  4. Queue, in this case, is another web service (due to familiarity and time constraints), but it wouldn't be a problem to use something like RabbitMQ instead.
+  5. Sinon was used for stubs, Mocha for runing tests.
+  6. Dox was added and can be used to generate documentation.
+  7. ...
 
