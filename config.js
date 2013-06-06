@@ -8,7 +8,10 @@ module.exports = {
 
     'redis' : {},
 
-    'amqp' : {
-        'host'     : 'localhost'
+    'queue' : {  
+        host: 'rodpetrovic.com',
+        port: '80',
+        path: '/index.html',
+        method: 'POST'
     }
 };

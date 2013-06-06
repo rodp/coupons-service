@@ -4,7 +4,7 @@
     "description"    : "",
     "version"        : "1.0.0",
     "repository"     : {},
-    "main"           : "./service",
+    "main"           : "./coupon-service",
     "scripts": {
         "test"       : "mocha"
     },
@@ -13,6 +13,7 @@
     },
     "dependencies": {
         "express"    : "3.x",
+        "cors"       : "1.x",
         "node-uuid"  : "1.4.x",
         "mysql"      : "2.x",
         "redis"      : "0.8.x",

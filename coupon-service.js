@@ -1,7 +1,10 @@
 var express = require('express'),
+    cors    = require('cors'),
     Coupon  = require('./lib/Coupon');
 
 var app = express();
+
+app.use(cors());
 
 app.get('/coupons/:campaignID', function (request, response) {
     var coupon = new Coupon({ campaignID: request.params.campaignID, ip: request.ip });
